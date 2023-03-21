@@ -60,6 +60,7 @@ header {
 	background-repeat: no-repeat;
     margin: 0 auto;
     padding-top: 10px;
+    max-width: 100%;
 
 }
 
@@ -100,15 +101,14 @@ span {
 }
 .bothContainers {
     display: flex;
+    max-width: 1080px;
     width: 75%; 
 	margin: 0 auto;
     color: #FCFCFC;
     height: 520px;
+    
 }
 
-.imageContainer {
-    flex-grow: 1;
-}
 
 .textContainer h2 {
     font-size: 3rem; 
@@ -117,7 +117,25 @@ span {
 }
 
 .imageContainer img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 34px;
+    margin-right: 50px;
+}
 
+.textContainer {
+    margin-left: 40px;
+
+}
+
+.textContainer button {
+    background: #FCFCFC;
+    color: #152D20;
+    border: none;
+    font-family: 'CormorantGaramond';
+    padding: 15px 25px;
+    text-transform: uppercase;
+    line-height: 29px;
 }
 
 /* some of our friends gallery */
@@ -127,7 +145,8 @@ span {
     text-transform: uppercase;
     text-align: center;
     color: #152D20;
-    padding-bottom: 40px; 
+    padding-top: 60px;
+    padding-bottom: 80px; 
 
 }
 
@@ -156,11 +175,65 @@ span {
 
 /* animal spotlight styles */
 
-.animalSpotlight {
+.iconSet {
     background: #152D20;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Cormorant Garamond';
 }
 
-/* zebras styles */
+.iconSet a {
+    font-size: 2rem;
+    line-height: 40px;
+    text-align: center;
+    width: 150px
+
+}
+
+.animalSpotlight {
+    display: flex;
+    flex-wrap: nowrap; 
+    flex-direction: column;
+    align-items: center;
+
+}
+.animalSpotlight :first-child {
+    width: 100px;
+    margin-bottom: 10px;
+
+}
+
+.events {
+    display: flex;
+    flex-wrap: nowrap; 
+    flex-direction: column;
+    flex-basis: 2%;
+    align-items: center;
+    margin-top: 30px;
+
+}
+.events :first-child {
+    width: 100px;
+    margin-bottom: 10px;
+
+}
+
+.merch {
+    display: flex;
+    flex-wrap: nowrap; 
+    flex-direction: column;
+    flex-basis: 2%;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.merch :first-child {
+    width: 100px;
+    margin-bottom: 10px;
+
+}
+
+/* general grid styles */
 
 .grid {
     display: flex;
@@ -169,6 +242,20 @@ span {
     margin: 0 auto;
 
 }
+
+.grid button {
+    background: #152D20;
+    color: #fcfcfc;
+    border: none;
+    font-family: 'CormorantGaramond';
+    padding: 15px 25px;
+    text-transform: uppercase;
+    line-height: 29px;
+    
+}
+
+/* zebras styles */
+
 .zebras {
     display: flex;
     flex-wrap: wrap;
@@ -184,15 +271,19 @@ span {
 .zebrasText {
     justify-content: center;
     align-self: center;
-    flex-direction:column
+    flex-direction: column;
+
 }
 
 .zebrasText h2 {
     text-transform: uppercase;
     font-size: 35px;
+    line-height: 42px;
 }
 
-
+.zebraImage img {
+    height: 100%;
+} 
 
 /* animalBond styles */
 
@@ -201,15 +292,167 @@ span {
     flex-wrap: wrap; 
     padding: 0;
     margin: 0 auto;
-    color: #152D20
+    color: #152D20;
+    max-width: 2000px;
+    margin-bottom: 0;
+
 }
 
 .animalBond > div {
     flex: 50%;
 }
 
+.animalBondText {
+    margin-top: 120px;
+    
+}
+
 .animalBondText h2 {
     text-transform: uppercase;
     font-size: 35px;
+    text-align: left;
+    line-height: 43px;
 
 }
+
+.animalBond img {
+    height: 100%;
+}
+
+/* bottom section styles */
+
+
+.bottomBar {
+    background: #152D20;
+    color: #FCFCFC;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 120px;
+}
+
+
+.bottomBar h3 {
+    text-transform: uppercase;
+    font-family: 'CormorantGaramond';
+    margin-bottom: 2px;
+    font-size: 1.5rem;
+
+}
+
+.newsletter {
+    text-align: center;
+    margin-left: 200px;
+}
+
+form button { 
+    background: #000000;
+    color: #fcfcfc;
+    border: none;
+    font-family: 'CormorantGaramond';
+    padding: 10.5px 30px;
+    text-transform: uppercase;
+    line-height: 29px;
+    margin-left: 0px;
+    font-size: 1.25rem;
+}
+
+form input {
+    padding: 11px 120px 11px 30px;
+    margin-right: 0;
+
+}
+
+::placeholder {
+    text-align: left;
+}
+
+
+.contactInfo {
+    width: 20%;
+}
+/* footer styles */
+
+footer {
+    background: #000;
+    color: #fcfcfc;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: center;
+}
+
+footer a {
+    font-size: 10px;
+}
+
+/* media queries */
+
+@media (max-width: 768px) {
+    header {
+        height: 80vh;
+        background-position-x: 30%;
+    }
+    header h1 {
+        font-size: 30px;
+        text-align: left; 
+        line-height: 29px;
+    }
+    .topNav {
+        display: none;
+    }
+
+    /* suzie section mq */
+    .bothContainers {
+        flex-wrap: wrap;
+        height: 100vh;
+        max-width: 768px;
+    }
+
+    .textContainer {
+        font-size: 18px;
+        margin-left: 0px;
+        line-height: 1.15;
+    }
+
+    .textContainer h2 {
+        font-size: 30px;
+        flex-direction: row;
+    }
+
+    .textContainer button {
+        margin-left: 35px;
+    }
+
+    /* some of our friend mq */
+
+
+    .friends ul {
+        flex-direction: column;
+        margin-right: 30px;
+    }
+
+
+    /* animal spotlight section mq */
+
+    .iconSet {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    /* zebras sectiom mq */
+    .zebras {
+        height: 100vh;
+    }
+
+    .zebraImage {
+        order: -1;
+    }
+
+    .zebrasText {
+        text-align: center;
+    }
+
+    .animalBond {
+        flex-direction: column;
+    }
+
+  }
